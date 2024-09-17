@@ -2,18 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:myapp/model/transaction.dart';
 
 class TransactionsProvider extends ChangeNotifier {
-  final List<Transaction> _transactions = [
-    Transaction(
-      type: TransactionType.income,
-      amount: 1000.00,
-      description: 'salario',
-    ),
-    Transaction(
-      type: TransactionType.expense,
-      amount: 500.00,
-      description: 'Renta',
-    ),
-  ];
+  final List<Transaction> _transactions = [];
 
   List<Transaction> get transactions => _transactions;
 
@@ -36,7 +25,7 @@ class TransactionsProvider extends ChangeNotifier {
   }
 
   double getBalance() {
-    return getDoubleIncome() - getDoubleExpense();
+    return getDoubleIncome() + getDoubleExpense();
   }
 
   void addTransaction(Transaction transaction) {

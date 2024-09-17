@@ -14,7 +14,7 @@ class AddTransactionDialog extends StatefulWidget {
 
 class _AddTransactionDialogState extends State<AddTransactionDialog> {
   int? typeIndex = 0; //entero que no puede ser nulo
-  TransactionType type = TransactionType.expense;
+  TransactionType type = TransactionType.income;
   double amount = 0;
   String description = '';
 
